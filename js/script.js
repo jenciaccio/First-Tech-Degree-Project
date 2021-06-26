@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
  ***/
 
-let randomIndex;
+
 
 let quotes = [{
         quote: "We believed that anything that was worth doing was worth overdoing.",
@@ -50,7 +50,7 @@ let quotes = [{
  * `getRandomQuote` function
  ***/
 let selectedQuote;
-
+let randomIndex;
 
 function getRandomQuote() {
     randomIndex = Math.floor(Math.random() * 5);
@@ -63,6 +63,11 @@ console.log(getRandomQuote());
  ***/
 
 
+
+function printQuote() {
+
+
+}
 
 /***
  * click event listener for the print quote button
