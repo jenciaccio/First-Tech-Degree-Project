@@ -10,27 +10,36 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
  ***/
+
+let randomIndex;
+
 let quotes = [{
         quote: "We believed that anything that was worth doing was worth overdoing.",
-        author: "Steven Tyler",
+        source: "Steven Tyler",
         year: 1990
     },
 
     {
         quote: "I used to jog but the ice cubes kept falling out of my glass.",
-        author: "David Lee Roth",
+        source: "David Lee Roth",
         year: 1979
     },
     {
         quote: "I'm not a Woman, I'm a force of nature",
-        author: "Courtney Love",
+        source: "Courtney Love",
         year: 1998
 
     },
     {
         quote: "Life sucks, but in a beautiful kind of way",
-        author: "Axle Rose",
+        source: "Axle Rose",
         year: 1998
+    },
+    {
+        quote: "Jazz, isn’t that just a series of mistakes diguised as musical composition?",
+        source: "David St. Hubbins",
+        year: 1992,
+        citation: "This is Spinal Tap"
     }
 
 
@@ -40,7 +49,10 @@ let quotes = [{
 /***
  * `getRandomQuote` function
  ***/
+function getRandomQuote() {
+    randomIndex = Math.floor(Math.random() * 5);
 
+}
 
 
 /***
