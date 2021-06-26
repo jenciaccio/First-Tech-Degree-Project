@@ -49,11 +49,14 @@ let quotes = [{
 /***
  * `getRandomQuote` function
  ***/
+let selectedQuote;
+
+
 function getRandomQuote() {
     randomIndex = Math.floor(Math.random() * 5);
-
+    return quotes[randomIndex];
 }
-
+console.log(getRandomQuote());
 
 /***
  * `printQuote` function
