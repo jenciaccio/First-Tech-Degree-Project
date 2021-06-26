@@ -1,2 +1,2 @@
-# First Tech Degree Project
+# Teck Degree Project 1
  Quote Generator
