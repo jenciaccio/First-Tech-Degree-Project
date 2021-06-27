@@ -16,28 +16,34 @@ project 1 - A Random Quote Generator
 let quotes = [{
         quote: "We believed that anything that was worth doing was worth overdoing.",
         source: "Steven Tyler",
+        group: "Aerosmith",
         year: 1990
     },
 
     {
         quote: "I used to jog but the ice cubes kept falling out of my glass.",
         source: "David Lee Roth",
+        group: "Van Halen",
         year: 1979
     },
     {
         quote: "I'm not a Woman, I'm a force of nature",
         source: "Courtney Love",
+        group: "Hole",
         year: 1998
 
     },
     {
         quote: "Life sucks, but in a beautiful kind of way",
         source: "Axle Rose",
+        group: "Guns 'N' Roses",
         year: 1998
     },
+
     {
         quote: "Jazz, isn’t that just a series of mistakes diguised as musical composition?",
         source: "David St. Hubbins",
+        group: "Spinal Tap",
         year: 1984,
         citation: "This is Spinal Tap"
     }
@@ -75,6 +81,9 @@ function printQuote() {
     }
     if (displayedQuote.year) {
         message += `<span class="citation">${displayedQuote.year}</span>`
+    }
+    if (displayedQuote.group) {
+        message += `<span class="group">${displayedQuote.group}</span>`
     }
 
     message += `</p>`;
