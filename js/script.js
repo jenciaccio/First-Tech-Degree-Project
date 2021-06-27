@@ -38,7 +38,7 @@ let quotes = [{
     {
         quote: "Jazz, isn’t that just a series of mistakes diguised as musical composition?",
         source: "David St. Hubbins",
-        year: 1992,
+        year: 1984,
         citation: "This is Spinal Tap"
     }
 
@@ -69,9 +69,16 @@ console.log(getRandomQuote());
 function printQuote() {
     displayedQuote = getRandomQuote();
     message = `<p class="quote">${displayedQuote.quote}</p>
-    <p class="source">${displayedQuote.source}</p>`
+    <p class="source">${displayedQuote.source}`;
+    if (displayedQuote.citation) {
+        message += `<span class="citation">${displayedQuote.citation}</span>`
+    }
+    if (displayedQuote.year) {
+        message += `<span class="citation">${displayedQuote.year}</span>`
+    }
 
-
+    message += `</p>`;
+    return document.getElementById('quote-box').innerHTML = message;
 }
 console.log(printQuote());
 
