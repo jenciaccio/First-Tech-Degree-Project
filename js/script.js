@@ -51,6 +51,8 @@ let quotes = [{
  ***/
 let selectedQuote;
 let randomIndex;
+let displayedQuote;
+let message;
 
 function getRandomQuote() {
     randomIndex = Math.floor(Math.random() * 5);
@@ -65,9 +67,13 @@ console.log(getRandomQuote());
 
 
 function printQuote() {
+    displayedQuote = getRandomQuote();
+    message = `<p class="quote">${displayedQuote.quote}</p>
+    <p class="source">${displayedQuote.source}</p>`
 
 
 }
+console.log(printQuote());
 
 /***
  * click event listener for the print quote button
