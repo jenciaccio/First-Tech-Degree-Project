@@ -64,7 +64,7 @@ function getRandomQuote() {
     randomIndex = Math.floor(Math.random() * 5);
     return quotes[randomIndex];
 }
-console.log(getRandomQuote());
+
 
 /***
  * `printQuote` function
@@ -72,6 +72,7 @@ console.log(getRandomQuote());
 
 
 
+//chooses random quote to be printed
 function printQuote() {
     displayedQuote = getRandomQuote();
     message = `<p class="quote">${displayedQuote.quote}</p>
@@ -87,15 +88,16 @@ function printQuote() {
     }
 
     message += `</p>`;
-    return document.getElementById('quote-box').innerHTML = message;
+    return document.getElementById('quote-box').innerHTML = message; //applies random quote and props
 }
-console.log(printQuote());
-//random backgound color
+
+//selects random backgound color
 const randomValue = () => Math.floor(Math.random() * 256);
 
+//changes background color
 function bgColor() {
     const color = `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
-    return document.body.style.background = color;
+    return document.body.style.background = color; //applies random color to background
 
 
 };
@@ -108,8 +110,8 @@ function bgColor() {
  * DO NOT CHANGE THE CODE BELOW!!
  ***/
 
-setInterval(printQuote, 10000);
-setInterval(bgColor, 10000);
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+setInterval(printQuote, 10000); //automatically prints new quote every 10 seconds
+setInterval(bgColor, 10000); //automatically changes background color every 10 seconds
+document.getElementById('load-quote').addEventListener("click", printQuote, false); //changes quote on click
 
-document.getElementById('load-quote').addEventListener("click", bgColor, false);
+document.getElementById('load-quote').addEventListener("click", bgColor, false); //changes background color on click
