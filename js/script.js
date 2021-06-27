@@ -90,10 +90,26 @@ function printQuote() {
     return document.getElementById('quote-box').innerHTML = message;
 }
 console.log(printQuote());
+//random backgound color
+const randomValue = () => Math.floor(Math.random() * 256);
+
+function bgColor() {
+    const color = `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
+    return document.body.style.background = color;
+
+
+};
+
+
+
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
  ***/
 
+setInterval(printQuote, 10000);
+setInterval(bgColor, 10000);
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+document.getElementById('load-quote').addEventListener("click", bgColor, false);
