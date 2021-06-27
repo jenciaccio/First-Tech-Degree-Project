@@ -60,6 +60,7 @@ let randomIndex;
 let displayedQuote;
 let message;
 
+//picks random quote
 function getRandomQuote() {
     randomIndex = Math.floor(Math.random() * 5);
     return quotes[randomIndex];
@@ -72,7 +73,7 @@ function getRandomQuote() {
 
 
 
-//chooses random quote to be printed
+//builds quote string to be printed
 function printQuote() {
     displayedQuote = getRandomQuote();
     message = `<p class="quote">${displayedQuote.quote}</p>
