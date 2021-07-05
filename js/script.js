@@ -62,7 +62,7 @@ let message;
 
 //picks random quote
 function getRandomQuote() {
-    randomIndex = Math.floor(Math.random() * 5);
+    randomIndex = Math.floor(Math.random() * quotes.length);
     return quotes[randomIndex];
 }
 
@@ -82,7 +82,7 @@ function printQuote() {
         message += `<span class="citation">${displayedQuote.citation}</span>`
     }
     if (displayedQuote.year) {
-        message += `<span class="citation">${displayedQuote.year}</span>`
+        message += `<span class="year">${displayedQuote.year}</span>`
     }
     if (displayedQuote.group) {
         message += `<span class="group">${displayedQuote.group}</span>`
